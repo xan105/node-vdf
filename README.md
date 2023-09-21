@@ -52,6 +52,16 @@ Decode the VDF key/value text formatted string into an object.
 
 ⚙️ Options
 
+- translate?: boolean | object 
+
+  translate option accepts the following obj for granular control or a boolean true/false which force all options to true/false:
+  
+|name|type|default|description|
+|----|----|-------|-----------|
+|bool|boolean|true|String to boolean|
+|number|boolean|false|String to number or [bigint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)|
+|unsafe|boolean|false|Set to true to keep unsafe integer instead of bigint|
+
 ❌ Throws on error
 
 Example:
@@ -65,7 +75,8 @@ const string = await readFile(filePath, "utf8");
 const vdf = parse(string);
 ```
 
-⚠️ JSON compatibility
+<details>
+<summary>⚠️ JSON compatibility</summary>
 
 Some integers will be represented as **BigInt** due to their size if the related translate option is used.<br/>
 **BigInt is not a valid value in the JSON spec**.<br/>
@@ -81,6 +92,8 @@ JSON.stringify(data, function(key, value) {
     return value;
 });
 ```
+
+</details>
 
 ### `binary`
 
@@ -105,7 +118,8 @@ const vdf = parse(buffer);
 
 💡 Note that binary ".vdf" file usually requires additional processing like handling file header.
 
-⚠️ JSON compatibility
+<details>
+<summary>⚠️ JSON compatibility</summary>
 
 Some numbers will be represented as **BigInt** due to their size ((u)int64).<br/>
 **BigInt is not a valid value in the JSON spec**.<br/>
@@ -121,3 +135,5 @@ JSON.stringify(data, function(key, value) {
     return value;
 });
 ```
+
+</details>
