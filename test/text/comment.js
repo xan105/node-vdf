@@ -16,7 +16,7 @@ block
 "number"		"200" //inline
 #base another.file
 "string"		"string"
-"map" //inline
+"map"     //inline
 {
 }
 `;

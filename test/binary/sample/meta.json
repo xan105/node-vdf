@@ -1,0 +1,24 @@
+{
+  "": {
+    "members:numMachines": "1",
+    "members:numPlayers": "1",
+    "members:numSlots": "10",
+    "uids": "����\u0001",
+    "system:netflag": "teamlobby",
+    "system:network": "LIVE",
+    "system:access": "public",
+    "game:type": "classic",
+    "game:mode": "competitive",
+    "game:mapgroupname": "mg_de_dust2,mg_de_train,mg_de_nuke,mg_de_mirage,mg_de_cache,mg_de_overpass,mg_de_cbble",
+    "game:map": "de_dust2",
+    "game:prime": "1",
+    "game:nby": "1",
+    "game:state": "lobby",
+    "game:search_key": "k13565",
+    "game:ark": "0",
+    "game:apr": "0",
+    "game:loc": "US",
+    "options:anytypemode": "0",
+    "options:server": "official"
+  }
+}

@@ -16,9 +16,14 @@ const files = [
 
 test("VDF text | real samples", async (t) => {
   for (const file of files){
-    const vdf = await readFile(file, "utf8");
-    const actual = parse(vdf);
-    const expected = await readJSON(file.replace(".vdf",".json"));
-    assert.deepEqual(actual, expected);
+    try{
+      const vdf = await readFile(file, "utf8");
+      const actual = parse(vdf);
+      const expected = await readJSON(file.replace(".vdf",".json"));
+      assert.deepEqual(actual, expected);
+    }catch(err){
+      err.file = file;
+      throw err;
+    }
   }
 });

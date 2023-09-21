@@ -23,6 +23,15 @@ const vdf = parse(buffer);
 
 Reading text VDF file
 
+```js
+import { parse } from "@xan105/vdf";
+import { readFile } from "node:fs/promises";
+
+const filePath = "C:\\Program Files (x86)\\Steam\\appcache\\localization.vdf";
+const string = await readFile(filePath, "utf8");
+const vdf = parse(string);
+```
+
 Install
 =======
 
@@ -58,8 +67,8 @@ const vdf = parse(string);
 
 ⚠️ JSON compatibility
 
-Some integers will be represented as **BigInt** due to their size if the related translate option is used.
-**BigInt is not a valid value in the JSON spec**.
+Some integers will be represented as **BigInt** due to their size if the related translate option is used.<br/>
+**BigInt is not a valid value in the JSON spec**.<br/>
 As such when stringify-ing the returned object you'll need to handle the JSON stringify replacer function to prevent it to fail.
 
 A common workaround is to represent it as a string:
@@ -96,14 +105,10 @@ const vdf = parse(buffer);
 
 💡 Note that binary ".vdf" file usually requires additional processing like handling file header.
 
-```js
-
-```
-
 ⚠️ JSON compatibility
 
-Some numbers will be represented as **BigInt** due to their size ((u)int64).
-**BigInt is not a valid value in the JSON spec**.
+Some numbers will be represented as **BigInt** due to their size ((u)int64).<br/>
+**BigInt is not a valid value in the JSON spec**.<br/>
 As such when stringify-ing the returned object you'll need to handle the JSON stringify replacer function to prevent it to fail.
 
 A common workaround is to represent it as a string:
