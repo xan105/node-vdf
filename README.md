@@ -54,7 +54,7 @@ Decode the VDF key/value text formatted string into an object.
 
 - translate?: boolean | object 
 
-  translate option accepts the following obj for granular control or a boolean true/false which force all options to true/false:
+  translate option accepts the following object for granular control or a boolean which force all options to true/false:
   
 |name|type|default|description|
 |----|----|-------|-----------|
@@ -72,17 +72,25 @@ import { readFile } from "node:fs/promises";
 
 const filePath = "steam_input_for_ps4_controller.vdf";
 const string = await readFile(filePath, "utf8");
-const vdf = parse(string);
+
+const vdf = parse(string, { translate: {
+  bool: true,
+  number: true,
+  unsafe: false
+}});
+
+//All values will be string
+const vdf = parse(string, { translate: false });
 ```
 
 <details>
 <summary>⚠️ JSON compatibility</summary>
 
-Some integers will be represented as **BigInt** due to their size if the related translate option is used.<br/>
+Some integers will be represented as **BigInt** due to their size if the related translate options are used.<br/>
 **BigInt is not a valid value in the JSON spec**.<br/>
 As such when stringify-ing the returned object you'll need to handle the JSON stringify replacer function to prevent it to fail.
 
-A common workaround is to represent it as a string:
+A common workaround is to represent them as a string:
 
 ```js
 JSON.stringify(data, function(key, value) {
@@ -125,7 +133,7 @@ Some numbers will be represented as **BigInt** due to their size ((u)int64).<br/
 **BigInt is not a valid value in the JSON spec**.<br/>
 As such when stringify-ing the returned object you'll need to handle the JSON stringify replacer function to prevent it to fail.
 
-A common workaround is to represent it as a string:
+A common workaround is to represent them as a string:
 
 ```js
 JSON.stringify(data, function(key, value) {
