@@ -1,6 +1,6 @@
 {
   "name": "@xan105/vdf",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Valve VDF Key/Value format parser (text and binary)",
   "type": "module",
   "exports": {
