@@ -19,7 +19,7 @@
   },
   "scripts": {
     "lint": "eslint \"./lib/**/*.{js,mjs}\" \"./types/**/*.d.ts\"",
-    "test": "tap \"./test/**/*.js\" --no-coverage --no-coverage-report",
+    "test": "node --test test/",
     "check": "tsc --noemit --checkjs",
     "declare": "tsc --declaration --emitDeclarationOnly --outDir \"./types\""
   },

@@ -1,0 +1,50 @@
+{
+  "GameInfo": {
+    "game": "Team Fortress 2",
+    "type": "multiplayer_only",
+    "nomodels": "1",
+    "nohimodel": "1",
+    "nocrosshair": "0",
+    "hidden_maps": {
+      "test_speakers": "1",
+      "test_hardware": "1"
+    },
+    "nodegraph": "0",
+    "GameData": "tf.fgd",
+    "InstancePath": "maps/instances/",
+    "advcrosshair": "1",
+    "supportsvr": "1",
+    "FileSystem": {
+      "SteamAppId": "440",
+      "SearchPaths": {
+        "game+mod+custom_mod": "tf/custom/*",
+        "game_lv": "tf/tf2_lv.vpk",
+        "game+mod": [
+          "tf/tf2_textures.vpk",
+          "tf/tf2_sound_vo_english.vpk",
+          "tf/tf2_sound_misc.vpk"
+        ],
+        "game+mod+vgui": "tf/tf2_misc.vpk",
+        "game": [
+          "|all_source_engine_paths|hl2/hl2_textures.vpk",
+          "|all_source_engine_paths|hl2/hl2_sound_vo_english.vpk",
+          "|all_source_engine_paths|hl2/hl2_sound_misc.vpk",
+          "|all_source_engine_paths|hl2"
+        ],
+        "game+vgui": "|all_source_engine_paths|hl2/hl2_misc.vpk",
+        "platform+vgui": "|all_source_engine_paths|platform/platform_misc.vpk",
+        "mod+mod_write+default_write_path": "|gameinfo_path|.",
+        "game+game_write": "tf",
+        "gamebin": "tf/bin",
+        "platform": "|all_source_engine_paths|platform",
+        "game+download": "tf/download"
+      }
+    },
+    "ToolsEnvironment": {
+      "Engine": "Source",
+      "UseVPLATFORM": "1",
+      "PythonVersion": "2.7",
+      "PythonHomeDisable": "1"
+    }
+  }
+}

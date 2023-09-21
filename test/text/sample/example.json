@@ -1,0 +1,17 @@
+{
+  "AppBuild": {
+    "AppID": "1000",
+    "Desc": "This is a simple build script",
+    "ContentRoot": "../content/",
+    "BuildOutput": "../output/",
+    "Depots": {
+      "1001": {
+        "FileMapping": {
+          "LocalPath": "*",
+          "DepotPath": ".",
+          "recursive": "1"
+        }
+      }
+    }
+  }
+}
