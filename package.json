@@ -1,0 +1,74 @@
+{
+  "name": "@xan105/vdf",
+  "version": "0.1.0",
+  "description": "Valve VDF Key/Value format parser (text and binary)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./binary": {
+      "types": "./types/binary.d.ts",
+      "default": "./lib/binary.js"
+    }
+  },
+  "types": "./types/index.d.ts",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "lint": "eslint \"./lib/**/*.{js,mjs}\" \"./types/**/*.d.ts\"",
+    "test": "node --test test/",
+    "check": "tsc --noemit --checkjs",
+    "declare": "tsc --declaration --emitDeclarationOnly --outDir \"./types\""
+  },
+  "keywords": [
+    "steam",
+    "valve",
+    "vdf",
+    "binary",
+    "key",
+    "value"
+  ],
+  "author": {
+    "name": "Anthony Beaumont",
+    "email": "dev.xan105@outlook.be",
+    "url": "https://xan105.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xan105/node-vdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xan105/node-vdf/issues"
+  },
+  "homepage": "https://github.com/xan105/node-vdf#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/xan105"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/xan105"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/xan105"
+    }
+  ],
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "@xan105/fs": "^2.2.0",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@xan105/error": "^1.6.1",
+    "@xan105/is": "^2.8.2"
+  }
+}
