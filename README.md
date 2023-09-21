@@ -105,7 +105,7 @@ JSON.stringify(data, function(key, value) {
 
 ### `binary`
 
-#### `parse(buffer: buffer, offset?: number[]): object`
+#### `parse(buffer: Buffer, offset?: number[]): object`
 
 Decode the VDF key/value binary formatted buffer into an object (starting at the given offset if any).
 
