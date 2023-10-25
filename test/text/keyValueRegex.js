@@ -14,7 +14,7 @@ SearchPaths
 }
 `;
 
-test("VDF text | regex special case", (t) => {
+test("VDF text | regex special case", () => {
   const expected = {
     game: "Team Fortress 2",
     GameData: "tf.fgd",

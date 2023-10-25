@@ -56,7 +56,7 @@ const vdf =
 }
 `;
 
-test("VDF text | grouping duplicate keys", (t) => {
+test("VDF text | grouping duplicate keys", () => {
   const expected = {
     game: {
       name: "Team Fortress 2",

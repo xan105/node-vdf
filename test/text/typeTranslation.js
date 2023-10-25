@@ -15,7 +15,7 @@ const vdf =
 }
 `;
 
-test("VDF text | translate type | default", (t) => {
+test("VDF text | translate type | default", () => {
   const expected = {
     description: "This is an example object!",
     types: {
@@ -32,7 +32,7 @@ test("VDF text | translate type | default", (t) => {
   assert.deepEqual(actual, expected);
 });
 
-test("VDF text | translate type | on", (t) => {
+test("VDF text | translate type | on", () => {
   const expected = {
     description: "This is an example object!",
     types: {
@@ -49,7 +49,7 @@ test("VDF text | translate type | on", (t) => {
   assert.deepEqual(actual, expected);
 });
 
-test("VDF text | translate type | off", (t) => {
+test("VDF text | translate type | off", () => {
   const expected = {
     description: "This is an example object!",
     types: {

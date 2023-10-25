@@ -21,7 +21,7 @@ block
 }
 `;
 
-test("VDF text | ignoring comment", (t) => {
+test("VDF text | ignoring comment", () => {
   const expected = {
     description: "This is an example object!",
     float: "2307.1997",

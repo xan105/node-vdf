@@ -1,5 +1,5 @@
 import test from "node:test";
-import assert from "node:assert";
+import assert from "node:assert/strict";
 import { join } from "node:path";
 import { dirname } from "@xan105/fs/path";
 import { readJSON, readFile } from "@xan105/fs";

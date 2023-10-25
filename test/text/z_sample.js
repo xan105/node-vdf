@@ -1,5 +1,5 @@
 import test from "node:test";
-import assert from "node:assert";
+import assert from "node:assert/strict";
 import { join } from "node:path";
 import { dirname } from "@xan105/fs/path";
 import { readJSON, readFile } from "@xan105/fs";
@@ -14,7 +14,7 @@ const files = [
   join(dir, "steam_input_for_ps4_controller.vdf"),
 ];
 
-test("VDF text | real samples", async (t) => {
+test("VDF text | real samples", async () => {
   for (const file of files){
     try{
       const vdf = await readFile(file, "utf8");
